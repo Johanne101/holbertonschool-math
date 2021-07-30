@@ -13,7 +13,9 @@ void display_complex_number(complex c)
 			printf(" + ");
 		else
 			printf(" - ");
-		printf("%.fi", c.im);
+		if (c.im != -1 && c.im != 1)
+			printf("%.f", c.im);
+		printf("i");
 	}
 	printf("\n");
 }
